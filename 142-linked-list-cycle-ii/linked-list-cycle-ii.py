@@ -6,7 +6,6 @@ class Solution:
             slow=slow.next
             fast=fast.next.next
             if slow==fast:
-                #cycle
                 break
         if fast==None or fast.next==None:
             return None
