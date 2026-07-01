@@ -1,0 +1,18 @@
+class Solution:
+    def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        slow=head
+        fast=head
+        while fast!=None and fast.next!=None:
+            slow=slow.next
+            fast=fast.next.next
+            if slow==fast:
+                #cycle
+                break
+        if fast==None or fast.next==None:
+            return None
+        n1=slow
+        n2=head
+        while n1!=n2:
+            n1=n1.next
+            n2=n2.next
+        return n1
