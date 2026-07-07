@@ -2,8 +2,7 @@ class Solution:
     def totalFruit(self, fruits: List[int]) -> int:
         count={}
         maxx=0
-        j=0
-        i=0
+        i,j=0,0
         while j < len(fruits):
             fruit=fruits[j]
             count[fruit]=count.get(fruit,0)+1
