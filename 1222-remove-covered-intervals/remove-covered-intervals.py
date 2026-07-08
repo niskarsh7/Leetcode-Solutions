@@ -7,8 +7,8 @@ class Solution:
             prev=result[-1]
             curr=intervals[i]
             if curr[0]>=prev[0] and curr[1]<=prev[1]:
-                i+=1
+                pass
             else:
                 result.append(curr)
-                i+=1
+            i+=1
         return len(result)
