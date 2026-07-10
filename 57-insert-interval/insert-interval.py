@@ -1,5 +1,9 @@
 class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
+        #insert position ...keep inserting position in res 
+        #while overlapping update newInterval
+        #no Overlapping...insert intervals into res
+        #insert remaining intervals in res
         res=[]
         i=0
         while i< len(intervals) and newInterval[0]>intervals[i][1]:
