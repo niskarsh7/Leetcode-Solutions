@@ -1,17 +1,14 @@
 class Solution:
     def swapNodes(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
-        l=0
-        curr=head
+        curr,l=head,0
         while curr!=None:
             l+=1
             curr=curr.next
-        i=0
-        curr1=head
+        curr1,i=head,0
         while i < k-1:
             curr1=curr1.next
             i+=1
-        j=0
-        curr2=head
+        curr2,j=head,0
         while j < l-k:
             curr2=curr2.next
             j+=1
