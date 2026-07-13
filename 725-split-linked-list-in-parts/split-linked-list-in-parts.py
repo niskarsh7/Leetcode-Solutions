@@ -15,13 +15,10 @@ class Solution:
             curr=curr.next
         uniformNumber= length//k
         remainingNumber=length%k
-
         res = [None]*k
         curr=head
-
         for i in range(k):
             count=uniformNumber
-            
             if remainingNumber>0:
                 count+=1
                 remainingNumber-=1
@@ -35,8 +32,6 @@ class Solution:
                 prev=curr
                 curr=curr.next
                 counter+=1
-            
             prev.next=None
             res[i]=temp1
         return res
-        
